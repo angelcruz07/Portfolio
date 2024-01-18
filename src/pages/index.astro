@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro'
+import GitHub from '../icons/GitHub.astro'
+import Discord from '../icons/Discord.astro'
+import LinkedIn from '../icons/LinkIn.astro'
+import SocialPill from '../components/SocialPill.astro'
+import Email from '../icons/Email.astro'
+
+---
+
+<Layout title="Portafolio Angel Cruz - Desarrollador y programador Web"
+description='Contratame para crear tu web o potenciar tu negocio'
+>
+	<main>
+		<section class="lg:w-[740px] mx-auto py-44 w-full" >
+			<article>	
+				<span class="text-6xl"> &#123 </span>
+				<img src="/img/Perfil.png" alt="Logo Angel Cruz" class="w-25 h-20 rounded mt-10">
+				<h1 class="text-5xl font-bold text-neon-blue ">Hey, Soy Angel Cruz </h1>
+				<h2 class="opacity-80 mb-10">Soy un desarrollador front especializado en el desarrollo web</h2>
+				<span class="text-6xl"> &#125 </span>
+			</article>
+			<article>
+				<h3 class="text-center font-bold">Programar para crear soluciones no para resolver problemas</h3>
+				<nav class="flex justify-center gap-x-2 mt-5">
+					<SocialPill href="https://github.com/angelcruz07">
+						<GitHub/>
+						Git Hub 
+					</SocialPill >
+					<SocialPill href="">
+						<LinkedIn/>
+						LinkedIn
+					</SocialPill>
+					<SocialPill href="">
+						<Discord/>
+						Discord
+					</SocialPill>
+					<SocialPill href="">
+						<Email />
+						Gmail
+					</SocialPill>
+
+				</nav>	
+	
+			</article>
+		</section>
+		<section>
+
+		</section>
+	</main>
+</Layout>
