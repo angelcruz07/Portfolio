@@ -32,16 +32,22 @@ const { title, description } = Astro.props;
 	:root {
 		color-scheme: light dark;
 	}
+	@media(prefers-reduced-motion: reduce ){
 	html {
 		font-family:'Onest Variable', system-ui, sans-serif;
-		background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+		scroll-behavior: smooth;
 	}
+  }
 	body { 
 		display: flex;
 		flex-direction: column;
-		height: 100vh;
+		min-height: 100vh;
+		background: radial-gradient(ellipse at center, #1b2735 0%, #090a0f 100%);
+		background-size: cover; 
+		background-repeat: no-repeat;
+	
+
 	}
-	/* Definición de colores */
 .text-white {
   color: #fff;
 }

@@ -1,11 +1,13 @@
 ---
-
+import SectionContainer from '../components/SectionContainer.astro'
 import Layout from '../layouts/Layout.astro'
 import GitHub from '../icons/GitHub.astro'
 import Discord from '../icons/Discord.astro'
 import LinkedIn from '../icons/LinkIn.astro'
 import SocialPill from '../components/SocialPill.astro'
 import Email from '../icons/Email.astro'
+import Experience from '../components/Experience.astro'
+import Brifcase from '../icons/Brifcase.astro'
 
 ---
 
@@ -13,11 +15,11 @@ import Email from '../icons/Email.astro'
 description='Contratame para crear tu web o potenciar tu negocio'
 >
 	<main>
-		<section class="lg:w-[740px] mx-auto py-44 w-full" >
+		<SectionContainer class="py-44">
 			<article>	
 				<span class="text-6xl neon-green font-bold "> &#123 </span>
 				<img src="/img/Perfil.png" alt="Logo Angel Cruz" class="w-25 h-20 rounded mt-10">
-				<h1 class="text-5xl font-bold neon-white ">Hey, Soy Angel Cruz </h1>
+				<h1 class="text-5xl font-bold neon-white ">Hey, Soy Angel Cruz</h1>
 				<h2 class="opacity-80 mb-10 mt-5">Apasionado desarrollador web frontend. Amante de la estética y creador de
 					experiencias digitales cautivadoras. Transformo código en arte para sorprender al mundo</h2>
 				<span class="text-6xl neon-green font-bold"> &#125 </span>
@@ -29,7 +31,7 @@ description='Contratame para crear tu web o potenciar tu negocio'
 						<GitHub/>
 						Git Hub 
 					</SocialPill >
-					<SocialPill href="">
+					<SocialPill href="https://www.linkedin.com/in/angel-cruz079/">
 						<LinkedIn/>
 						LinkedIn
 					</SocialPill>
@@ -43,6 +45,15 @@ description='Contratame para crear tu web o potenciar tu negocio'
 					</SocialPill>
 				</nav>	
 			</article>
-		</section>
+		<SectionContainer/>
+
+		<SectionContainer id="experience" class="mt-20 ">
+			<h2 class="text-2xl font-semibold mb-5 flex gap-x-2 items-center ">
+				<Brifcase/>
+				Experiencia laboral </h2>
+			<Experience/>
+		<SectionContainer/>
+		
+
 	</main>
 </Layout>
