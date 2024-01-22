@@ -5,28 +5,30 @@ import GitHub from '../icons/GitHub.astro'
 import Discord from '../icons/Discord.astro'
 import LinkedIn from '../icons/LinkIn.astro'
 import SocialPill from '../components/SocialPill.astro'
-import Email from '../icons/Email.astro'
 import Experience from '../components/Experience.astro'
+import Projects from '../components/Projects.astro'
+import Email from '../icons/Email.astro'
 import Brifcase from '../icons/Brifcase.astro'
+import Code from '../icons/Code.astro'
 
 ---
 
 <Layout title="Portafolio Angel Cruz - Desarrollador y programador Web"
 description='Contratame para crear tu web o potenciar tu negocio'
 >
-	<main>
+	<main class="px-10">
 		<SectionContainer class="py-44">
 			<article>	
 				<span class="text-6xl neon-green font-bold "> &#123 </span>
-				<img src="/img/Perfil.png" alt="Logo Angel Cruz" class="w-25 h-20 rounded mt-10">
-				<h1 class="text-5xl font-bold neon-white ">Hey, Soy Angel Cruz</h1>
+				<img src="/img/Perfil.png" alt="Logo Angel Cruz" class="w-25 h-20 rounded my-5">
+				<h1 class="text-3xl md:text-5xl font-bold neon-white ">Hola, Soy Angel Cruz</h1>
 				<h2 class="opacity-80 mb-10 mt-5">Apasionado desarrollador web frontend. Amante de la estética y creador de
 					experiencias digitales cautivadoras. Transformo código en arte para sorprender al mundo</h2>
 				<span class="text-6xl neon-green font-bold"> &#125 </span>
 			</article>
 			<article>
 				<h3 class="text-center font-bold neon-beige text-white/75">"Si funciona no lo toques"</h3>
-				<nav class="flex justify-center gap-x-2 mt-5">
+				<nav class="flex justify-center gap-4 mt-5 flex-wrap">
 					<SocialPill href="https://github.com/angelcruz07">
 						<GitHub/>
 						Git Hub 
@@ -39,7 +41,7 @@ description='Contratame para crear tu web o potenciar tu negocio'
 						<Discord/>
 						Discord
 					</SocialPill>
-					<SocialPill href="">
+					<SocialPill href="mailto:angelcruzsanchez126@gmail.com">
 						<Email />
 						Gmail
 					</SocialPill>
@@ -48,12 +50,14 @@ description='Contratame para crear tu web o potenciar tu negocio'
 		<SectionContainer/>
 
 		<SectionContainer id="experience" class="mt-20 ">
-			<h2 class="text-2xl font-semibold mb-5 flex gap-x-2 items-center ">
-				<Brifcase/>
+			<h2 class="neon-violet text-3xl font-semibold mb-5 flex gap-x-2 items-center ">
+				<Brifcase class='size-7'/>
 				Experiencia laboral </h2>
 			<Experience/>
 		<SectionContainer/>
-		
-
+		<SectionContainer id="proyectos" class="mt-20 ">
+			<h2 class="text-3xl neon-green font-semibold flex gap-x-2 items-center"><Code class="size-7"/>Ultimos proyectos</h2>
+			<Projects/>
+		</SectionContainer>
 	</main>
 </Layout>
