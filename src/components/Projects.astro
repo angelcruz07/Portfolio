@@ -1,37 +1,97 @@
 ---
+import NextIcon from '../icons/Next.astro'
+import AstroIcon from '../icons/Astro.astro'
+import TailwindIcon from '../icons/Tailwind.astro'
+import PhpIcon from '../icons/Php.astro'
+import Mysql from '../icons/Mysql.astro'
+
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextIcon,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: TailwindIcon,
+  },
+  PHP : { 
+    name: "PHP", 
+    class: 'bg-neon-violet text-white', 
+    icon: PhpIcon
+  }, 
+  ASTRO : {
+    name : 'Astro', 
+    class: 'bg-black text-white',
+    icon: AstroIcon
+  }, 
+  MYSQL : {
+    name : 'Mysql', 
+    class: 'bg-neon-white text-black', 
+    icon: Mysql
+  }
+}
+
+
 const PROJECTS = [ 
     { 
-        title: 'Project 1', 
-        description: 'descripcion',
+        title: 'Turismo Sultepec ', 
+        description: 'Contribudor de un sitio web turistico para el municipio de Sultepec.',
         link: '', 
         github: '',
-        image: '',
-        tags: ['HTML', 'CSS', 'JS']
+        image: '/img/work1.webp',
+        tags: [TAGS.PHP, TAGS.MYSQL]
+    },
+    { 
+        title: 'NVS Latinos cleaning ', 
+        description: 'Landing page para servicios de limpieza en hogares de UK.',
+        link: '', 
+        github: '',
+        image: '/img/work2.webp',
+        tags: [TAGS.NEXT, TAGS.TAILWIND]
+    },
+    { 
+        title: 'Hamma Beads', 
+        description: 'Landing para para publicitar un negocio de piezas echas con la tenica Hamma Beads.', 
+        link: '',
+        image: '/img/work3.webp', 
+        tags: [TAGS.ASTRO, TAGS.TAILWIND] 
+
     }
-    // { 
-    //     title: '', 
-    //     description: '',
-    //     link: '', 
-    //     github: '',
-    //     image: '',
-    //     tags: ['HTML', 'CSS', 'JS']
-    // }
 ]
+
 
 ---
 
 
 { 
 PROJECTS.map(({ title, description, tags, image })=> (
- <article>
-    <h3>{title}</h3>
-    <p>{description}</p>  
-    <ul>
-        {tags.map(tag => (
-            <li>{tag}</li>
-        ))}
+ <article class="">
+    <div class='w-96  p-5 rounded  '>
+        <h3 class="text-2xl font-bold neon-white">{title}</h3>
+    <p class="text-base text-gray-400">{description}</p> 
+
+    <ul class='flex text-base gap-x-2 items-center mb-2 mt-1 '>
+        {tags.map((tag) => (
+            <li >
+              <span
+                class={`flex items-center gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 font-semibold `}
+              >
+                <tag.icon class='size-3' />
+                {tag.name}
+              </span>
+            </li>
+          ))}
     </ul> 
-    <img src={image} alt={title} title={title}/>
+    <img
+          loading="lazy"
+          class="rounded shadow-2xl shadow-white/10 aspect-video"
+          src={image}
+          alt={`Captura de pantalla del proyecto ${image}`}
+        />
+    </div>
 </article>
 
 ))
