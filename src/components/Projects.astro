@@ -4,6 +4,7 @@ import AstroIcon from '../icons/Astro.astro'
 import TailwindIcon from '../icons/Tailwind.astro'
 import PhpIcon from '../icons/Php.astro'
 import Mysql from '../icons/Mysql.astro'
+import Eye from '../icons/Eye.astro'
 
 
 const TAGS = {
@@ -39,7 +40,7 @@ const PROJECTS = [
     { 
         title: 'Turismo Sultepec ', 
         description: 'Contribudor de un sitio web turistico para el municipio de Sultepec.',
-        link: '', 
+        link: 'https://sultepec-turistico.000webhostapp.com/', 
         github: '',
         image: '/img/work1.webp',
         tags: [TAGS.PHP, TAGS.MYSQL]
@@ -47,15 +48,15 @@ const PROJECTS = [
     { 
         title: 'NVS Latinos cleaning ', 
         description: 'Landing page para servicios de limpieza en hogares de UK.',
-        link: '', 
-        github: '',
+        link: 'https://cleaning-services-nine.vercel.app/', 
+        github: '#',
         image: '/img/work2.webp',
         tags: [TAGS.NEXT, TAGS.TAILWIND]
     },
     { 
         title: 'Hamma Beads', 
         description: 'Landing para para publicitar un negocio de piezas echas con la tenica Hamma Beads.', 
-        link: '',
+        link: 'https://www.hammabeads.shop/',
         image: '/img/work3.webp', 
         tags: [TAGS.ASTRO, TAGS.TAILWIND] 
 
@@ -67,9 +68,9 @@ const PROJECTS = [
 
 
 { 
-PROJECTS.map(({ title, description, tags, image })=> (
+PROJECTS.map(({ title, description, tags, image, link})=> (
  <article class="">
-    <div class='w-96  p-5 rounded  '>
+   <div class='md:w-96 cursor-pointer '>
         <h3 class="text-2xl font-bold neon-white">{title}</h3>
     <p class="text-base text-gray-400">{description}</p> 
 
@@ -84,10 +85,16 @@ PROJECTS.map(({ title, description, tags, image })=> (
               </span>
             </li>
           ))}
+            <li >
+            <a  class="flex flex-row"href={link} target="_blank">
+             <Eye/> Demo
+            </a>
+          </li>
+          
     </ul> 
     <img
           loading="lazy"
-          class="rounded shadow-2xl shadow-white/10 aspect-video"
+          class="rounded shadow-2xl shadow-white/10 aspect-video "
           src={image}
           alt={`Captura de pantalla del proyecto ${image}`}
         />
