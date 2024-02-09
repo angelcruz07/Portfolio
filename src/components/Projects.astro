@@ -39,7 +39,7 @@ const TAGS = {
 const PROJECTS = [ 
     { 
         title: 'Turismo Sultepec ', 
-        description: 'Contribudor de un sitio web turistico para el municipio de Sultepec.',
+        description: 'Lider en desarrollo en un sitio web turistico para el municipio de Sultepec en es Estado De México.',
         link: 'https://sultepec-turistico.000webhostapp.com/', 
         github: '',
         image: '/img/work1.webp',
@@ -47,7 +47,7 @@ const PROJECTS = [
     },
     { 
         title: 'NVS Latinos cleaning ', 
-        description: 'Landing page para servicios de limpieza en hogares de UK.',
+        description: 'Landing page para servicios de limpieza en hogares de Reino Unido 🇬🇧.',
         link: 'https://cleaning-services-nine.vercel.app/', 
         github: '#',
         image: '/img/work2.webp',
@@ -76,7 +76,7 @@ PROJECTS.map(({ title, description, tags, image, link})=> (
 
     <ul class='flex text-base gap-x-2 items-center mb-5 mt-1 '>
         {tags.map((tag) => (
-            <li >
+            <li class="mt-2" >
               <span
                 class={`flex items-center gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 font-semibold `}
               >
