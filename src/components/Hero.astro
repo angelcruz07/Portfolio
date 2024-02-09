@@ -1,0 +1,45 @@
+---
+import GitHub from '../icons/GitHub.astro'
+import Discord from '../icons/Discord.astro'
+import LinkedIn from '../icons/LinkIn.astro'
+import Email from '../icons/Email.astro'
+import SocialPill from './SocialPill.astro'
+import Badge from './Badge.astro'
+---
+
+<article>	
+    <span class="text-6xl neon-green font-bold "> &#123 </span>
+    <divC class="flex  gap-4 mb-4">
+        <img src="/img/perfil.webp" alt="Logo Angel Cruz" class="w-25 h-20 rounded my-5">
+        <Badge>Disponible para trabajar</Badge>
+    </divC>
+    <h1 class="text-3xl md:text-5xl font-bold neon-white ">Hola, Soy Angel Cruz</h1>
+        <h2 class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
+            +2 años de experiencia. <strong
+                >Desarrollador Front-End</strong
+                > de México 🇲🇽. Especializado en el desarrollo de aplicaciones web personalizadas y únicas.
+        </h2>
+   
+    <span class="text-6xl neon-green font-bold"> &#125 </span>
+</article>
+<article>
+    <h3 class="text-center font-bold text-xl neon-beige text-white/75">"Si funciona no lo toques"</h3>
+    <nav class="flex justify-center gap-4 mt-5 flex-wrap">
+        <SocialPill href="https://github.com/angelcruz07">
+            <GitHub/>
+            Git Hub 
+        </SocialPill >
+        <SocialPill href="https://www.linkedin.com/in/angel-cruz079/">
+            <LinkedIn/>
+            LinkedIn
+        </SocialPill>
+        <SocialPill href="https://discord.gg/264ZGxbXnM">
+            <Discord/>
+            Discord
+        </SocialPill>
+        <SocialPill href="mailto:angelcruzsanchez126@gmail.com">
+            <Email />
+            Gmail
+        </SocialPill>
+    </nav>	
+<!-- </article> -->

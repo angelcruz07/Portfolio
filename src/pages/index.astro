@@ -1,19 +1,14 @@
 ---
 import SectionContainer from '../components/SectionContainer.astro'
 import Layout from '../layouts/Layout.astro'
-import GitHub from '../icons/GitHub.astro'
-import Discord from '../icons/Discord.astro'
-import LinkedIn from '../icons/LinkIn.astro'
-import SocialPill from '../components/SocialPill.astro'
 import Experience from '../components/Experience.astro'
 import Projects from '../components/Projects.astro'
-import Email from '../icons/Email.astro'
 import Brifcase from '../icons/Brifcase.astro'
 import Code from '../icons/Code.astro'
 import Profile from '../icons/Profile.astro'
 import Footer from '../components/Footer.astro'
 import AboutMe from '../components/AboutMe.astro'
-
+import Hero from '../components/Hero.astro'
 ---
 
 <Layout title="Portafolio Angel Cruz - Desarrollador y programador Web"
@@ -21,47 +16,20 @@ description='Contratame para crear tu web o potenciar tu negocio'
 >
 	<main class="px-10">
 		<SectionContainer class="py-28 md:py-36">
-			<article>	
-				<span class="text-6xl neon-green font-bold "> &#123 </span>
-				<img src="/img/perfil.webp" alt="Logo Angel Cruz" class="w-25 h-20 rounded my-5">
-				<h1 class="text-3xl md:text-5xl font-bold neon-white ">Hola, Soy Angel Cruz</h1>
-				<h2 class="opacity-80 mb-10 mt-5">Apasionado desarrollador web frontend. Amante de la estética y creador de
-					experiencias digitales cautivadoras. Transformo código en arte para sorprender al mundo</h2>
-				<span class="text-6xl neon-green font-bold"> &#125 </span>
-			</article>
-			<article>
-				<h3 class="text-center font-bold neon-beige text-white/75">"Si funciona no lo toques"</h3>
-				<nav class="flex justify-center gap-4 mt-5 flex-wrap">
-					<SocialPill href="https://github.com/angelcruz07">
-						<GitHub/>
-						Git Hub 
-					</SocialPill >
-					<SocialPill href="https://www.linkedin.com/in/angel-cruz079/">
-						<LinkedIn/>
-						LinkedIn
-					</SocialPill>
-					<SocialPill href="https://discord.gg/264ZGxbXnM">
-						<Discord/>
-						Discord
-					</SocialPill>
-					<SocialPill href="mailto:angelcruzsanchez126@gmail.com">
-						<Email />
-						Gmail
-					</SocialPill>
-				</nav>	
-			</article>
+			<Hero/>
+			
 		<SectionContainer/>
 
 		<SectionContainer id="experiencia" class="mt-20 ">
 			<h2 class="neon-violet text-3xl font-semibold mb-5 flex gap-x-2 items-center ">
 				<Brifcase class='size-7'/>
 				Experiencia laboral </h2>
-			<Experience/>
+					<Experience/>	
 		<SectionContainer/>
 
 		<SectionContainer id="proyectos" class="mt-20">
 			<h2 class="text-3xl neon-green font-semibold flex gap-2 items-center "><Code class="size-7"/>Ultimos trabajos</h2>
-			<div class="flex flex-row mt-5 gap-3 flex-wrap">
+			<div class="flex flex-row mt-5 gap-8 flex-wrap">
 				<Projects/>
 			</div>
 		</SectionContainer>

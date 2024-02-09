@@ -20,7 +20,7 @@ const TAGS = {
   },
   PHP : { 
     name: "PHP", 
-    class: 'bg-neon-violet text-white', 
+    class: 'bg-blue-500 text-white', 
     icon: PhpIcon
   }, 
   ASTRO : {
@@ -30,7 +30,7 @@ const TAGS = {
   }, 
   MYSQL : {
     name : 'Mysql', 
-    class: 'bg-neon-white text-black', 
+    class: 'bg-white text-black', 
     icon: Mysql
   }
 }
@@ -55,7 +55,7 @@ const PROJECTS = [
     },
     { 
         title: 'Hamma Beads', 
-        description: 'Landing para para publicitar un negocio de piezas echas con la tenica Hamma Beads.', 
+        description: 'Landing page  para para publicitar un negocio de piezas echas con la tecnica Hamma Beads.', 
         link: 'https://www.hammabeads.shop/',
         image: '/img/work3.webp', 
         tags: [TAGS.ASTRO, TAGS.TAILWIND] 
@@ -70,11 +70,11 @@ const PROJECTS = [
 { 
 PROJECTS.map(({ title, description, tags, image, link})=> (
  <article class="">
-   <div class='md:w-96 cursor-pointer '>
+   <div class='md:w-96'>
         <h3 class="text-2xl font-bold neon-white">{title}</h3>
     <p class="text-base text-gray-400">{description}</p> 
 
-    <ul class='flex text-base gap-x-2 items-center mb-2 mt-1 '>
+    <ul class='flex text-base gap-x-2 items-center mb-5 mt-1 '>
         {tags.map((tag) => (
             <li >
               <span
@@ -94,7 +94,7 @@ PROJECTS.map(({ title, description, tags, image, link})=> (
     </ul> 
     <img
           loading="lazy"
-          class="rounded shadow-2xl shadow-white/10 aspect-video "
+          class="rounded shadow-2xl shadow-white/10 aspect-video  cursor-pointer transition hover:scale-110  "
           src={image}
           alt={`Captura de pantalla del proyecto ${image}`}
         />
