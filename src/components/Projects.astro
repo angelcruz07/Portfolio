@@ -39,7 +39,7 @@ const TAGS = {
 const PROJECTS = [ 
     { 
         title: 'Turismo Sultepec ', 
-        description: 'Lider en desarrollo en un sitio web turistico para el municipio de Sultepec en es Estado De México.',
+        description: 'Lider de desarrollo en un sitio web para fomentar el turismo en el municipio de Sultepec - Edomex.',
         link: 'https://sultepec-turistico.000webhostapp.com/', 
         github: '',
         image: '/img/work1.webp',
@@ -78,19 +78,21 @@ PROJECTS.map(({ title, description, tags, image, link})=> (
         {tags.map((tag) => (
             <li class="mt-2" >
               <span
-                class={`flex items-center gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 font-semibold `}
+                class={`flex items-center gap-x-2 rounded-full py-1 px-2 text-xs ${tag.class} font-semibold `}
               >
                 <tag.icon class='size-3' />
                 {tag.name}
-              </span>
-            </li>
+              </span>    
+            </li>      
           ))}
-            <li >
-            <a  class="flex flex-row"href={link} target="_blank">
-             <Eye/> Demo
-            </a>
-          </li>
-          
+          <span>
+            <a  class="rounded-full mt-2
+                  flex justify-center items-center
+                   bg-white/10 hover:scale-110 
+                  transition cursor-pointer text-xs py-1 px-2" href={link} target="_blank">
+                   <Eye/> Demo
+              </a>  
+          </span>
     </ul> 
     <img
           loading="lazy"
