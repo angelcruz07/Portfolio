@@ -20,7 +20,7 @@ const TAGS = {
   },
   PHP : { 
     name: "PHP", 
-    class: 'bg-blue-500 text-white', 
+    class: 'bg-violet-600 text-white', 
     icon: PhpIcon
   }, 
   ASTRO : {
@@ -42,7 +42,7 @@ const PROJECTS = [
         description: 'Lider de desarrollo en un sitio web para fomentar el turismo en el municipio de Sultepec - Edomex.',
         link: 'https://sultepec-turistico.000webhostapp.com/', 
         github: '',
-        image: '/img/work1.webp',
+        image: '/img/works/work1.webp',
         tags: [TAGS.PHP, TAGS.MYSQL]
     },
     { 
@@ -50,14 +50,14 @@ const PROJECTS = [
         description: 'Landing page para servicios de limpieza en hogares de Reino Unido 🇬🇧.',
         link: 'https://cleaning-services-nine.vercel.app/', 
         github: '#',
-        image: '/img/work2.webp',
+        image: '/img/works/work2.webp',
         tags: [TAGS.NEXT, TAGS.TAILWIND]
     },
     { 
         title: 'Hamma Beads', 
         description: 'Landing page  para para publicitar un negocio de piezas echas con la tecnica Hamma Beads.', 
         link: 'https://www.hammabeads.shop/',
-        image: '/img/work3.webp', 
+        image: '/img/works/work3.webp', 
         tags: [TAGS.ASTRO, TAGS.TAILWIND] 
 
     }
@@ -74,7 +74,7 @@ PROJECTS.map(({ title, description, tags, image, link})=> (
         <h3 class="text-2xl font-bold neon-white">{title}</h3>
     <p class="text-base text-gray-400">{description}</p> 
 
-    <ul class='flex text-base gap-x-2 items-center mb-5 mt-1 '>
+    <ul class='flex text-base gap-x-2 items-center mb-5 mt-1'>
         {tags.map((tag) => (
             <li class="mt-2" >
               <span
@@ -85,14 +85,14 @@ PROJECTS.map(({ title, description, tags, image, link})=> (
               </span>    
             </li>      
           ))}
-          <span>
+          <li>
             <a  class="rounded-full mt-2
                   flex justify-center items-center
                    bg-white/10 hover:scale-110 
                   transition cursor-pointer text-xs py-1 px-2" href={link} target="_blank">
                    <Eye/> Demo
               </a>  
-          </span>
+        </li>
     </ul> 
     <img
           loading="lazy"
