@@ -4,18 +4,21 @@ import ExperienceItem from '../components/ExperienceItem.astro'
 const EXPERIENCE = [ 
    
     {
+        id: 1,
         date: '2024 - Actualmente',
         title: 'Desarrollador freelancer',
         description: 'Me desempeño actualmente en el desarrollo de sitios web para empresas y marcas que buscan mejorar su presencia en linea.',
         link: 'https://drive.google.com/file/d/1bvYEzInahQxWW2cr3BUSv8WOGRLcbK4I/view?usp=sharing'
     },
     {
+        id: 2, 
         date: '2024 - Actualmente',
-        title: 'Lider en la StartUp CodeVerse',
-        description: 'Me desempeño como lider en la StartUp CodeVerse, donde me encargo de la gestion de proyectos y desarrollo de software para la empresa',
-        link: ''
+        title: 'Desarrollador FrontEnd en la empresa CodeVerse',
+        description: 'Desarrollo del lado frontend para la empresa de desarrollo Code Verse, gestionando los proyectos de desarrollo de la empresa como mantenimiento de los mismos.',
+        link: 'https://www.codeverse.mx/'
     },
     {
+        id: 3,
         date: '2021 - Actualmente',
         title: 'Estudiante en Tecnico en programación',
         description: 'Curso el ultimo semestre de bachillerato en la carrera "Tecnico en programacion"',
@@ -27,6 +30,6 @@ const EXPERIENCE = [
 <ol class="ml-3 relative border-s border-gray-200 dark:border-gray-700">                  
     {
     EXPERIENCE.map((experience) => (
-    <ExperienceItem {...experience} />
+    <ExperienceItem key={experience.id} {...experience} />
         ))}
 </ol>
