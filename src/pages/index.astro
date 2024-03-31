@@ -9,6 +9,7 @@ import Profile from '../icons/Profile.astro'
 import Footer from '../components/Footer.astro'
 import AboutMe from '../components/AboutMe.astro'
 import Hero from '../components/Hero.astro'
+import Projects2 from '../components/Projects1.astro'
 ---
 
 <Layout title="Portafolio Angel Cruz - Desarrollador y programador Web"
@@ -27,9 +28,13 @@ description='Contratame para crear tu web o potenciar tu negocio'
 		<SectionContainer/>
 
 		<SectionContainer id="proyectos" class="mt-20">
-			<h2 class="text-3xl neon-green font-semibold flex gap-2 items-center "><Code class="size-7"/>Ultimos trabajos</h2>
+			<h2 class="text-3xl neon-green font-semibold flex gap-2 items-center "><Brifcase class='size-7'/>Ultimos trabajos</h2>
 			<div class="flex flex-row mt-5 gap-8 flex-wrap">
 				<Projects/>
+			</div>
+			<h2 class="text-3xl neon-violet font-semibold flex gap-2 items-center mt-10"><Code class="size-7"/>Proyectos personales</h2>
+			<div class="flex flex-row mt-5 gap-8 flex-wrap">				
+				<Projects2 />
 			</div>
 		</SectionContainer>
 		<SectionContainer id="sobre-mi" class="mt-20 py-0 ">

@@ -1,9 +1,6 @@
 ---
 import NextIcon from '../icons/Next.astro'
-import AstroIcon from '../icons/Astro.astro'
 import TailwindIcon from '../icons/Tailwind.astro'
-import PhpIcon from '../icons/Php.astro'
-import Mysql from '../icons/Mysql.astro'
 import Eye from '../icons/Eye.astro'
 
 const TAGS = {
@@ -17,57 +14,18 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: TailwindIcon,
   },
-  PHP : { 
-    name: "PHP", 
-    class: 'bg-violet-600 text-white', 
-    icon: PhpIcon
-  }, 
-  ASTRO : {
-    name : 'Astro', 
-    class: 'bg-black text-white',
-    icon: AstroIcon
-  }, 
-  MYSQL : {
-    name : 'Mysql', 
-    class: 'bg-white text-black', 
-    icon: Mysql
-  }
 }
 
 
 const PROJECTS = [ 
-    {
-        title: 'Code Verse',
-        description: 'Landing page para la empresa de desarrollo de software Code Verse en México.',
-        link: 'https://codeverse.mx/',
-        github: '',
-        image: '/img/works/codeverse.webp',
-        tags: [TAGS.ASTRO, TAGS.TAILWIND]
-    },
     { 
-        title: 'Turismo Sultepec ', 
-        description: 'Lider de desarrollo en un sitio web para fomentar el turismo en el municipio de Sultepec - Edomex.',
-        link: 'https://sultepec-turistico.000webhostapp.com/', 
-        github: '',
-        image: '/img/works/work1.webp',
-        tags: [TAGS.PHP, TAGS.MYSQL]
-    },
-    { 
-        title: 'NVS Latinos cleaning ', 
-        description: 'Landing page para servicios de limpieza en hogares de Reino Unido 🇬🇧.',
-        link: 'https://cleaning-services-nine.vercel.app/', 
+        title: 'Mind Flow', 
+        description: 'Proyecto resultado de un hackathon de 48 horas en el cual trabaje en equipo junto a dos personas mas y logramos crear Mind Flow una aplicación innovadora destinada a cultivar la paz mental y la serenidad en la vida cotidiana',
+        link: 'https://mindflow-nine.vercel.app/', 
         github: '#',
-        image: '/img/works/work2.webp',
+        image: '/img/projects/mindflow.webp',
         tags: [TAGS.NEXT, TAGS.TAILWIND]
     },
-    { 
-        title: 'Hamma Beads', 
-        description: 'Landing page  para para publicitar un negocio de piezas echas con la tecnica Hamma Beads.', 
-        link: 'https://www.hammabeads.shop/',
-        image: '/img/works/work3.webp', 
-        tags: [TAGS.ASTRO, TAGS.TAILWIND] 
-
-    }
 ]
 ---
 
@@ -99,14 +57,14 @@ PROJECTS.map(({ title, description, tags, image, link})=> (
               </a>  
         </li>
     </ul> 
-    <a href={link} target="_blan">
+    <a href={link} target="_blank">
     <img
           loading="lazy"
           class="rounded shadow-2xl shadow-white/10 aspect-video  cursor-pointer transition hover:scale-110  "
           src={image}
           alt={`Captura de pantalla del proyecto ${image}`}
         />
-    </a>
+        </a>
     </div>
 </article>
 
