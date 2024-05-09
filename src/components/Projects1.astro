@@ -1,6 +1,7 @@
 ---
 import NextIcon from '../icons/Next.astro'
 import TailwindIcon from '../icons/Tailwind.astro'
+import Linux from '../icons/ArchLinux.astro'
 import Eye from '../icons/Eye.astro'
 
 const TAGS = {
@@ -14,18 +15,32 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: TailwindIcon,
   },
+  ARCHLINUX: {
+    name: "Arch Linux",
+    class: "bg-black text-white",
+    icon: Linux,
+  },
 }
 
 
 const PROJECTS = [ 
     { 
         title: 'Mind Flow', 
-        description: 'Proyecto resultado de un hackathon de 48 horas en el cual trabaje en equipo junto a dos personas mas y logramos crear Mind Flow una aplicación innovadora destinada a cultivar la paz mental y la serenidad en la vida cotidiana',
+        description: 'Proyecto resultado de un hackathon de 48 horas en el cual trabaje en equipo junto a dos personas mas y creamos Mind Flow una aplicación innovadora destinada a cultivar la paz mental y la serenidad.',
         link: 'https://mindflow-nine.vercel.app/', 
         github: '#',
         image: '/img/projects/mindflow.webp',
         tags: [TAGS.NEXT, TAGS.TAILWIND]
     },
+    {
+      title: 'Entorno de escritorio ArchLinux',
+      description: "Como entusiasta de la tecnologia e decidio crear mi entorno de escritorio personalizado utilizando Arch Linux, utilizando el Qtile, puedes encontrar mis configuraciones en mis dotfiles en GitHub.",
+      link: "https://github.com/angelcruz07/dotfiles.git",
+      github:"https://github.com/angelcruz07/dotfiles.git",
+      image: "/img/projects/archlinux.webp",
+      tags: [TAGS.ARCHLINUX]
+
+    }
 ]
 ---
 
@@ -60,6 +75,8 @@ PROJECTS.map(({ title, description, tags, image, link})=> (
     <a href={link} target="_blank">
     <img
           loading="lazy"
+          width="500"
+          height="500"
           class="rounded shadow-2xl shadow-white/10 aspect-video  cursor-pointer transition hover:scale-110  "
           src={image}
           alt={`Captura de pantalla del proyecto ${image}`}
