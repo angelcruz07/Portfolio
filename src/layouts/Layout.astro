@@ -22,7 +22,7 @@ const { title, description } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-			<Header></Header>
+			<Header/>
 		<slot />
 	</body>
 </html>
@@ -32,12 +32,14 @@ const { title, description } = Astro.props;
 	:root {
 		color-scheme: light dark;
 	}
+
 	@media(prefers-reduced-motion: reduce ){
-	html {
-		font-family:'Onest Variable', system-ui, sans-serif;
-		scroll-behavior: smooth;
-	}
+		html {
+			font-family:'Onest Variable', system-ui, sans-serif;
+			scroll-behavior: smooth;
+		}
   }
+
 	body { 
 		display: flex;
 		flex-direction: column;
@@ -46,25 +48,28 @@ const { title, description } = Astro.props;
 		background-size: cover; 
 		min-width: 100%;
 	}
+
 	.text-white {
 	color: #fff;
 	}
+
 	.neon-blue {
 	color: #2ccbf3ff;
 	}
+
 	.neon-white {
 	color: #ffffff;
 	}
+
 	.neon-violet {
 	color: #bb99fa;
 	}
+
 	.neon-green {
 	color: #b6d161;
 	}
+
 	.neon-beige {
 	color: #f5b7a4;
 	}
-	.neon-red { 
-		color: #ff0049;
-	}
-</style>
+	</style>

@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets'
 import NextIcon from '../icons/Next.astro'
 import TailwindIcon from '../icons/Tailwind.astro'
 import Linux from '../icons/ArchLinux.astro'
@@ -73,15 +74,15 @@ PROJECTS.map(({ title, description, tags, image, link})=> (
         </li>
     </ul> 
     <a href={link} target="_blank">
-    <img
+    <Image
           loading="lazy"
           width="500"
           height="500"
-          class="rounded shadow-2xl shadow-white/10 aspect-video  cursor-pointer transition hover:scale-110  "
+          class="rounded shadow-2xl shadow-white/10 aspect-video cursor-pointer transition hover:scale-110  "
           src={image}
           alt={`Captura de pantalla del proyecto ${image}`}
         />
-        </a>
+      </a>
     </div>
 </article>
 

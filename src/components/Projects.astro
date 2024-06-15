@@ -1,8 +1,8 @@
 ---
+import { Image } from 'astro:assets'
 import NextIcon from '../icons/Next.astro'
 import AstroIcon from '../icons/Astro.astro'
 import TailwindIcon from '../icons/Tailwind.astro'
-import PhpIcon from '../icons/Php.astro'
 import Mysql from '../icons/Mysql.astro'
 import Eye from '../icons/Eye.astro'
 
@@ -17,11 +17,6 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: TailwindIcon,
   },
-  PHP : { 
-    name: "PHP", 
-    class: 'bg-violet-600 text-white', 
-    icon: PhpIcon
-  }, 
   ASTRO : {
     name : 'Astro', 
     class: 'bg-black text-white',
@@ -37,6 +32,14 @@ const TAGS = {
 
 const PROJECTS = [ 
     {
+      title: 'Code Verse',
+          description: 'Remasterizacion del sitio web de la empresa de desarrollo de software Code Verse en México.',
+          link: 'https://codeverse-page.vercel.app/',
+          github: '',
+          image: '/img/works/codeverse1.webp',
+          tags: [TAGS.NEXT, TAGS.TAILWIND]
+    },
+    {
         title: 'Code Verse',
         description: 'Landing page para la empresa de desarrollo de software Code Verse en México.',
         link: 'https://codeverse.mx/',
@@ -47,10 +50,10 @@ const PROJECTS = [
     { 
         title: 'Turismo Sultepec ', 
         description: 'Lider de desarrollo en un sitio web para fomentar el turismo en el municipio de Sultepec - Edomex.',
-        link: 'https://sultepec-turistico.000webhostapp.com/', 
+        link: 'https://sultepec-turistico.vercel.app/', 
         github: '',
         image: '/img/works/work1.webp',
-        tags: [TAGS.PHP, TAGS.MYSQL]
+        tags: [TAGS.NEXT, TAGS.MYSQL]
     },
     { 
         title: 'NVS Latinos cleaning ', 
@@ -100,10 +103,10 @@ PROJECTS.map(({ title, description, tags, image, link})=> (
         </li>
     </ul> 
     <a href={link} target="_blan">
-    <img
-          loading="lazy"
-          class="rounded shadow-2xl shadow-white/10 aspect-video  cursor-pointer transition hover:scale-110  "
+    <Image
           src={image}
+          width={500}
+          height={300}
           alt={`Captura de pantalla del proyecto ${image}`}
         />
     </a>
