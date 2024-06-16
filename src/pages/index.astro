@@ -1,15 +1,15 @@
 ---
-import SectionContainer from '../components/SectionContainer.astro'
+import SectionContainer from '../components/ui/SectionContainer.astro'
 import Layout from '../layouts/Layout.astro'
-import Experience from '../components/Experience.astro'
-import Projects from '../components/Projects.astro'
+import WorkExperience from '../components/sections/WorkExperience.astro'
+import Works from '../components/sections/Work.astro'
 import Brifcase from '../icons/Brifcase.astro'
 import Code from '../icons/Code.astro'
 import Profile from '../icons/Profile.astro'
-import Footer from '../components/Footer.astro'
-import AboutMe from '../components/AboutMe.astro'
-import Hero from '../components/Hero.astro'
-import Projects2 from '../components/Projects1.astro'
+import Footer from '../components/sections/Footer.astro'
+import AboutMe from '../components/sections/AboutMe.astro'
+import Hero from '../components/sections/Hero.astro'
+import Projects from '../components/sections/Projects.astro'
 ---
 
 <Layout title="Portafolio Angel Cruz - Desarrollador y programador Web"
@@ -23,22 +23,22 @@ description='Contratame para crear tu web o potenciar tu negocio'
 		<SectionContainer id="experiencia" class="mt-20 ">
 			<h2 class="text-violet text-3xl font-semibold mb-5 flex gap-x-2 items-center left-0 "><Brifcase class='size-7'/>Experiencia laboral </h2>
 			<div class="flex justify-center mr-2">
-				<Experience/>	
+				<WorkExperience/>	
 			</div>
 		<SectionContainer/>
 
 		<SectionContainer id="proyectos" class="mt-20">
 			<h2 class="text-3xl text-green font-semibold flex gap-2 items-center "><Brifcase class='size-7'/>Ultimos trabajos</h2>
 			<div class="flex flex-row mt-5 gap-8 flex-wrap">
-				<Projects/>
+				<Works/>
 			</div>
 			<h2 class="text-3xl text-violet font-semibold flex gap-2 items-center mt-10"><Code class="size-7"/>Proyectos personales</h2>
 			<div class="flex flex-row mt-5 gap-8 flex-wrap">				
-				<Projects2 />
+				<Projects />
 			</div>
 		</SectionContainer>
 		<SectionContainer id="sobre-mi" class="mt-20 py-0 ">
-			<h2 class="text-3xl text-blue font-semibold flex gap-2 items-center "><Profile class="size-7"/>Sobre mi</h2>
+			<h2 class="text-3xl text-blue font-semibold flex gap-2 items-center"><Profile class="size-7"/>Sobre mi</h2>
 			<AboutMe/>
 		</SectionContainer>
 	</main>

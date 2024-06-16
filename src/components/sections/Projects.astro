@@ -1,9 +1,9 @@
 ---
 import { Image } from 'astro:assets'
-import NextIcon from '../icons/Next.astro'
-import TailwindIcon from '../icons/Tailwind.astro'
-import Linux from '../icons/ArchLinux.astro'
-import Eye from '../icons/Eye.astro'
+import NextIcon from '../../icons/Next.astro'
+import TailwindIcon from '../../icons/Tailwind.astro'
+import Linux from '../../icons/ArchLinux.astro'
+import Eye from '../../icons/Eye.astro'
 
 const TAGS = {
   NEXT: {
@@ -78,7 +78,7 @@ PROJECTS.map(({ title, description, tags, image, link})=> (
           loading="lazy"
           width="500"
           height="500"
-          class="rounded shadow-2xl shadow-white/10 aspect-video cursor-pointer transition hover:scale-110  "
+          class="rounded shadow-2xl shadow-white/10 aspect-video cursor-pointer transition hover:scale-110"
           src={image}
           alt={`Captura de pantalla del proyecto ${image}`}
         />

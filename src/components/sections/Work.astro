@@ -1,10 +1,10 @@
 ---
 import { Image } from 'astro:assets'
-import NextIcon from '../icons/Next.astro'
-import AstroIcon from '../icons/Astro.astro'
-import TailwindIcon from '../icons/Tailwind.astro'
-import Mysql from '../icons/Mysql.astro'
-import Eye from '../icons/Eye.astro'
+import NextIcon from '../../icons/Next.astro'
+import AstroIcon from '../../icons/Astro.astro'
+import TailwindIcon from '../../icons/Tailwind.astro'
+import Mysql from '../../icons/Mysql.astro'
+import Eye from '../../icons/Eye.astro'
 
 const TAGS = {
   NEXT: {
@@ -34,7 +34,7 @@ const PROJECTS = [
     {
       title: 'Code Verse',
           description: 'Remasterizacion del sitio web de la empresa de desarrollo de software Code Verse en México.',
-          link: 'https://codeverse-page.vercel.app/',
+          link: 'https://codeverse.mx',
           github: '',
           image: '/img/works/codeverse1.webp',
           tags: [TAGS.NEXT, TAGS.TAILWIND]
@@ -42,7 +42,7 @@ const PROJECTS = [
     {
         title: 'Code Verse',
         description: 'Landing page para la empresa de desarrollo de software Code Verse en México.',
-        link: 'https://codeverse.mx/',
+        link: 'https://codeverse-landing.vercel.app/',
         github: '',
         image: '/img/works/codeverse.webp',
         tags: [TAGS.ASTRO, TAGS.TAILWIND]
@@ -107,6 +107,7 @@ PROJECTS.map(({ title, description, tags, image, link})=> (
           src={image}
           width={500}
           height={300}
+          class="rounded shadow-2xl shadow-white/10 aspect-video cursor-pointer transition hover:scale-110  "
           alt={`Captura de pantalla del proyecto ${image}`}
         />
     </a>
