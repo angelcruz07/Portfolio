@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets'
 import GitHub from '../../icons/GitHub.astro'
 import Discord from '../../icons/Discord.astro'
 import LinkedIn from '../../icons/LinkIn.astro'
@@ -10,7 +11,7 @@ import Badge from '../ui/Badge.astro'
 <article>	
     <span class="text-6xl text-green font-bold "> &#123 </span>
     <div class="flex gap-4 mb-4">
-        <img src="/img/perfil.webp" alt="Logo Angel Cruz" class="w-25 h-20 rounded my-5">
+        <Image src="/img/perfil.webp" alt="Angel Cruz Desarrollador Web" height={90} width={90} class="rounded my-5" />
         <Badge>Disponible para trabajar</Badge>
     </div>
     <h1 class="text-3xl md:text-5xl font-bold neon-white">Hola, Soy Angel Cruz</h1>
