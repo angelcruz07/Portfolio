@@ -12,16 +12,14 @@ import Hero from '@/components/sections/Hero.astro'
 import Projects from '@/components/sections/Projects.astro'
 import Title from '@/components/ui/Title .astro'
 
-import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getI18N } from "@/i18n"
 
-// defaultLocale es "es"
-// const currentURL = getRelativeLocaleUrl("es");ws
-
-// console.log(currentURL)
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
 ---
 
-<Layout title="Portafolio Angel Cruz - Desarrollador y programador Web"
-description='Contratame para crear tu web o potenciar tu negocio'
+<Layout title=`${i18n.SEO_TITLE}`
+description={i18n.SEO_DESCRIPTION}
 >
 	<main class="px-10">
 		<SectionContainer class="mt-20 md:py-32">

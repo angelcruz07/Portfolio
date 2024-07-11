@@ -6,8 +6,8 @@ import tailwind from '@astrojs/tailwind'
 // https://astro.build/config
 export default defineConfig({
   i18n: {
-    defaultLocale: 'es-MX',
-    locales: ['es-MX', 'en-US']
+    defaultLocale: 'es',
+    locales: ['es', 'en']
   },
   integrations: [tailwind()],
   site: 'https://angeldev.me',
