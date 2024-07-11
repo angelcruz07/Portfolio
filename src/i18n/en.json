@@ -10,5 +10,24 @@
   "EXPERIENCE_TITLE": "Laboral experience",
   "WORKS_TITLE": "Latest Projects",
   "PROJECTS_TITLE": "Projects",
-  "ABOUT_TITLE": "About me"
+  "ABOUT_TITLE": "About me",
+  "WORK_EXPERIENCE": {
+    "ITEMS": {
+      "1": {
+        "DATE": "2024 - Currently",
+        "TITLE": "Frelancer developer",
+        "DESCRIPTION": ""
+      },
+      "2": {
+        "DATE": "2024 - Currently",
+        "TITLE": "Front-End Developer in Code Verse",
+        "DESCRIPTION": "I currently work in the development of websites for companies and brands that are looking for a digital solution to enhance their online presence."
+      },
+      "3": {
+        "DATE": "2021 - 2024",
+        "TITLE": "Programming Technician Student",
+        "DESCRIPTION": "Completed my bachelor's degree in 'Programming Technician' with a duration of 3 years."
+      }
+    }
+  }
 }

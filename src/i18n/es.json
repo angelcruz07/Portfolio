@@ -10,5 +10,24 @@
   "EXPERIENCE_TITLE": "Experiencia laboral",
   "WORKS_TITLE": "Ultimos Trabajos",
   "PROJECTS_TITLE": "Proyectos",
-  "ABOUT_TITLE": "Sobre mi"
+  "ABOUT_TITLE": "Sobre mi",
+  "WORK_EXPERIENCE": {
+    "ITEMS": {
+      "1": {
+        "DATE": "2024 - Actualmente",
+        "TITLE": "Desarrollador Frelancer",
+        "DESCRIPTION": "Me desempeño actualmente en el desarrollo de sitios web para empresas y marcas que buscan una solucion digital para potenciar su presencia en linea."
+      },
+      "2": {
+        "DATE": "2024 - Actualmente",
+        "TITLE": "Desarrollador Front-End en Code Verse",
+        "DESCRIPTION": "Desempeño un papel clave en el desarrollo frontend en la empresa de desarrollo Code Verse. Mi responsabilidad incluye la gestión de proyectos de desarrollo, así como el mantenimiento y la optimización continua de los mismos."
+      },
+      "3": {
+        "DATE": "2021 - 2024",
+        "TITLE": "Estudiante en Técnico en programación",
+        "DESCRIPTION": "Complete el bachillerato en la carrera Técnico en Programación con duracion de 3 años."
+      }
+    }
+  }
 }

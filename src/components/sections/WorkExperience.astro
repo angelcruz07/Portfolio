@@ -1,26 +1,31 @@
 ---
 import ExperienceItem from '../ui/ExperienceItem.astro'
 
+import { getI18N } from "@/i18n"
+
+const { currentLocale } = Astro
+const t = getI18N({ currentLocale })
+
 const EXPERIENCE = [ 
     {
         id: 1,
-        date: '2024 - Actualmente',
-        title: 'Desarrollador freelancer',
-        description: 'Me desempeño actualmente en el desarrollo de sitios web para empresas y marcas que buscan una solucion digital para potenciar su presencia en linea.',
+        date: t.WORK_EXPERIENCE.ITEMS[1].DATE,
+        title: t.WORK_EXPERIENCE.ITEMS[1].TITLE,
+        description: t.WORK_EXPERIENCE.ITEMS[1].DESCRIPTION,
         link: 'https://drive.google.com/file/d/1TiAFnvGNDUAc5yR3pX8CpxOQbnwlrBz6/view?usp=sharing'
     },
     {
         id: 2, 
-        date: '2024 - Actualmente',
-        title: 'Desarrollador frontend en la empresa Code Verse',
-        description: 'Desempeño un papel clave en el desarrollo frontend en la empresa de desarrollo Code Verse. Mi responsabilidad incluye la gestión de proyectos de desarrollo, así como el mantenimiento y la optimización continua de los mismos.',
+        date: t.WORK_EXPERIENCE.ITEMS[2].DATE,
+        title: t.WORK_EXPERIENCE.ITEMS[2].TITLE,
+        description: t.WORK_EXPERIENCE.ITEMS[2].DESCRIPTION, 
         link: 'https://www.codeverse.mx/'
     },
     {
         id: 3,
-        date: '2021 - 2024',
-        title: 'Estudiante en Técnico en programación',
-        description: 'Finalice el bachillerato en la carrera "Técnico en Programación" con duracion de 3 años.',
+        date: t.WORK_EXPERIENCE.ITEMS[3].DATE,
+        title: t.WORK_EXPERIENCE.ITEMS[3].TITLE,
+        description: t.WORK_EXPERIENCE.ITEMS[3].DESCRIPTION ,
         link: ''
     }
 ]
