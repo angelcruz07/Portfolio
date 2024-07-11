@@ -1,4 +1,5 @@
 ---
+import LanguageSelector from '../ui/LanguageSelector.astro';
 import Link from './Link.astro'
 
 import { getLangFromUrl, useTranslations } from '@/i18n/utils';
@@ -13,5 +14,6 @@ const t = useTranslations(lang);
      <Link href="#experiencia">{t('nav.experience')}</Link>
      <Link href="#proyectos">{t('nav.projects')}</Link>
      <Link href="#sobre-mi">{t('nav.about')}</Link>
+    <LanguageSelector/>
    </nav>
 </header>

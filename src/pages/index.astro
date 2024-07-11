@@ -15,11 +15,11 @@ import Title from '@/components/ui/Title .astro'
 import { getI18N } from "@/i18n"
 
 const { currentLocale } = Astro
-const i18n = getI18N({ currentLocale })
+const t = getI18N({ currentLocale })
 ---
 
-<Layout title=`${i18n.SEO_TITLE}`
-description={i18n.SEO_DESCRIPTION}
+<Layout title=`${t.SEO_TITLE}`
+description={t.SEO_DESCRIPTION}
 >
 	<main class="px-10">
 		<SectionContainer class="mt-20 md:py-32">
