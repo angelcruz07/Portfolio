@@ -19,15 +19,17 @@ const t = getI18N({ currentLocale })
         <Image src="/img/perfil.webp" alt="Angel Cruz Desarrollador Web" height={90} width={90} class="rounded my-5" />
         <Badge>{t.BADGE}</Badge>
     </div>
-    <h1 class="text-3xl md:text-5xl font-bold neon-white">{t.TITLE_HOME}</h1>
+    <h1 class="text-3xl md:text-5xl font-bold neon-white tracking-tight">{t.TITLE_HOME}</h1>
         <h2 class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
-            {t.DESCRIPTION_HOME}
+            {t.DESCRIPTION_HOME_1} <strong
+                >{t.PROFESSION}</strong
+                > 
+            {t.DESCRIPTION_HOME_2}   
         </h2>
-   
     <span class="text-6xl text-green font-bold"> &#125 </span>
 </article>
 <article>
-    <h3 class="text-center font-bold text-xl text-beige">"Programar para crear soluciones no para resolver problemas"</h3>
+    <h3 class="text-center font-bold text-xl text-beige">"{t.PHRASE}."</h3>
     <nav class="flex justify-center gap-4 mt-5 flex-wrap">
         <SocialPill href="https://github.com/angelcruz07">
             <GitHub/>
