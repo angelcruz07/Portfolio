@@ -13,36 +13,45 @@ import Projects from '../components/sections/Projects.astro'
 import Title from '../components/ui/Title .astro'
 ---
 
-<Layout title="Portafolio Angel Cruz - Desarrollador y programador Web"
-description='Contratame para crear tu web o potenciar tu negocio'
+<Layout
+  title="Portafolio Angel Cruz - Desarrollador y programador Web"
+  description="Contratame para crear tu web o potenciar tu negocio">
+  <main class="px-10">
+    <SectionContainer class="md:py-32">
+      <Hero />
+      <SectionContainer />
+
+      <SectionContainer id="experiencia" class="mt-20">
+        <Title color="text-violet"
+          ><Brifcase class="size-7" />Experiencia profesional</Title
+        >
+        <div class="flex justify-center mr-2">
+          <WorkExperience />
+        </div>
+
+        <SectionContainer />
+
+        <SectionContainer id="proyectos" class="mt-20">
+          <Title color="text-green"
+            ><Brifcase class="size-7" />Ultimos trabajos</Title
+          >
+          <div class="flex flex-row mt-5 gap-8 flex-wrap">
+            <Works />
+          </div>
+          <Title color="text-violet mt-5"
+            ><Code class="size-7" />Proyectos personales</Title
+          >
+          <div class="flex flex-row mt-5 gap-8 flex-wrap">
+            <Projects />
+          </div>
+        </SectionContainer>
+
+        <SectionContainer id="sobre-mi" class="mt-20 py-0">
+          <Title color="text-blue"><Profile class="size-7" />Sobre mi</Title>
+          <AboutMe />
+        </SectionContainer>
+      </SectionContainer>
+      <Footer />
+    </SectionContainer>
+  </main></Layout
 >
-	<main class="px-10">
-    
-		<SectionContainer class="md:py-32">
-			<Hero/>
-		<SectionContainer/>
-
-		<SectionContainer id="experiencia" class="mt-20 ">
-			<Title color="text-violet"><Brifcase class='size-7'/>Experiencia profesional</Title>
-			<div class="flex justify-center mr-2">
-				<WorkExperience/>	
-			</div>
-		<SectionContainer/>
-
-		<SectionContainer id="proyectos" class="mt-20">
-			<Title color="text-green"><Brifcase class='size-7'/>Ultimos trabajos</Title>
-			<div class="flex flex-row mt-5 gap-8 flex-wrap">
-				<Works/>
-			</div>
-			<Title color="text-violet mt-5"><Code class="size-7"/>Proyectos personales</Title>	
-			<div class="flex flex-row mt-5 gap-8 flex-wrap">				
-				<Projects />
-			</div>
-		</SectionContainer>
-		<SectionContainer id="sobre-mi" class="mt-20 py-0 ">
-			<Title color="text-blue"><Profile class="size-7"/>Sobre mi</Title>
-			<AboutMe/>
-		</SectionContainer>
-	</main>
-	<Footer/>
-</Layout>

@@ -8,41 +8,53 @@ import SocialPill from '../ui/SocialPill.astro'
 import Badge from '../ui/Badge.astro'
 ---
 
-<article class="mb-10 mt-20 md:mb-0 md:mt-0">	
-    <span class="text-6xl text-green font-bold "> &#123 </span>
-    <div class="flex gap-4">
-        <Image src="/img/perfil.webp" alt="Angel Cruz Desarrollador Web" height={90} width={90} class="rounded my-5" />
-        <Badge>Disponible para trabajar</Badge>
-    </div>
-    <h1 class="text-3xl md:text-6xl font-extrabold neon-white">Hola, Soy Angel Cruz</h1>
+<article class="mb-10 mt-20 md:mb-0 md:mt-0">
+  <span class="text-6xl text-green font-bold"> &#123 </span>
+  <div class="flex gap-4">
+    <Image
+      src="/img/perfil.webp"
+      alt="Angel Cruz Desarrollador Web"
+      height={90}
+      width={90}
+      class="rounded my-5"
+    />
+    <Badge>Disponible para trabajar</Badge>
+  </div>
+  <h1 class="text-3xl md:text-6xl font-extrabold neon-white">
+    Hola, Soy Angel Cruz
+  </h1>
 
-        <p class="my-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
-            +2 Años de Experiencia. Estudiante de <strong
-    >Ingenieria en Sistemas</strong><br> 
-        enfocado en el Desarrollo de Aplicaciones Web Modernas,<br/> especializado en NextJs
-        </p>
+  <p
+    class="my-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
+    +2 Años de Experiencia. Estudiante de <strong>Ingenieria en Sistemas</strong
+    ><br />
+    enfocado en el Desarrollo de Aplicaciones Web Modernas,<br /> especializado en
+    NextJs
+  </p>
 
-    <span class="text-6xl text-green font-bold"> &#125 </span>
+  <span class="text-6xl text-green font-bold"> &#125 </span>
 </article>
 
 <article>
-    <h3 class="text-center font-bold text-xl text-green">"Programar para crear soluciones no para resolver problemas"</h3>
-    <nav class="flex justify-center gap-4 mt-5 flex-wrap">
-        <SocialPill href="https://github.com/angelcruz07">
-            <GitHub/>
-            GitHub 
-        </SocialPill >
-        <SocialPill href="https://www.linkedin.com/in/angel-cruz079/">
-            <LinkedIn/>
-            LinkedIn
-        </SocialPill>
-        <SocialPill href="https://discord.gg/264ZGxbXnM">
-            <Discord/>
-            Discord
-        </SocialPill>
-        <SocialPill href="mailto:angelcruzsanchez126@gmail.com">
-            <Email />
-            Gmail
-        </SocialPill>
-    </nav>	
+  <h3 class="text-center font-bold text-xl text-green">
+    "Programar para crear soluciones no para resolver problemas"
+  </h3>
+  <nav class="flex justify-center gap-4 mt-5 flex-wrap">
+    <SocialPill href="https://github.com/angelcruz07">
+      <GitHub />
+      GitHub
+    </SocialPill>
+    <SocialPill href="https://www.linkedin.com/in/angel-cruz079/">
+      <LinkedIn />
+      LinkedIn
+    </SocialPill>
+    <SocialPill href="https://discord.gg/264ZGxbXnM">
+      <Discord />
+      Discord
+    </SocialPill>
+    <SocialPill href="mailto:angelcruzsanchez126@gmail.com">
+      <Email />
+      Gmail
+    </SocialPill>
+  </nav>
 </article>

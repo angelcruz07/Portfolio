@@ -1,41 +1,46 @@
 ---
 import ExperienceItem from '../ui/ExperienceItem.astro'
 
-const EXPERIENCE = [ 
-    {
-       id: 4, 
-       date: '09-24 - Actualmente',
-       title: 'Estudiante de Ingenieria en Sistemas Computacionales',
-       description: 'Actualmente ingrese a la universidad dentro de la carrera de Ingenieria en Sistemas Computacionales, dando un paso extra en mi carrera profesional como desarrollador de software.',
-       link: ''
-    },
-    {
-        id: 1,
-        date: '2024 - Actualmente',
-        title: 'Desarrollador freelancer',
-        description: 'Me desempeño actualmente en el desarrollo de sitios web para empresas y marcas que buscan una solucion digital para potenciar su presencia en linea.',
-        link: 'https://drive.google.com/file/d/1TiAFnvGNDUAc5yR3pX8CpxOQbnwlrBz6/view?usp=sharing'
-    }, 
-    {
-        id: 2, 
-        date: '01-24 - 08-2024',
-        title: 'Mid-Level Code Verse',
-        description: 'Desempeñe un papel clave en el desarrollo frontend en la empresa de desarrollo Code Verse. Mi responsabilidades incluian la gestión de proyectos de desarrollo aplicando metodologias agiles, llamadas con clientes para comunicar requerimentos al equipo.',
-        link: 'https://www.codeverse.mx/'
-    },
-    {
-        id: 3,
-        date: '2021 - 2024',
-        title: 'Graduado de Técnico en programación',
-        description: 'Finalice el bachillerato en la carrera "Técnico en Programación" con duracion de 3 años, durante mi estadia en la institucion participe en proyectos de desarrollo internos de la escuela, ademas aportando con practicas profesionales en el lugar de residencia creando el sitio oficial del municipio.',
-        link: ''
-    }
+const EXPERIENCE = [
+  {
+    id: 4,
+    date: '09-24 - Actualmente',
+    title: 'Estudiante de Ingenieria en Sistemas Computacionales',
+    description:
+      'Actualmente ingrese a la universidad dentro de la carrera de Ingenieria en Sistemas Computacionales, dando un paso extra en mi carrera profesional como desarrollador de software.',
+    link: ''
+  },
+  {
+    id: 1,
+    date: '2024 - Actualmente',
+    title: 'Desarrollador freelancer',
+    description:
+      'Me desempeño actualmente en el desarrollo de sitios web para empresas y marcas que buscan una solucion digital para potenciar su presencia en linea.',
+    link: 'https://drive.google.com/file/d/1TiAFnvGNDUAc5yR3pX8CpxOQbnwlrBz6/view?usp=sharing'
+  },
+  {
+    id: 2,
+    date: '01-24 - 08-2024',
+    title: 'Mid-Level Code Verse',
+    description:
+      'Desempeñe un papel clave en el desarrollo frontend en la empresa de desarrollo Code Verse. Mi responsabilidades incluian la gestión de proyectos de desarrollo aplicando metodologias agiles, llamadas con clientes para comunicar requerimentos al equipo.',
+    link: 'https://www.codeverse.mx/'
+  },
+  {
+    id: 3,
+    date: '2021 - 2024',
+    title: 'Graduado de Técnico en programación',
+    description:
+      'Finalice el bachillerato en la carrera "Técnico en Programación" con duracion de 3 años, durante mi estadia en la institucion participe en proyectos de desarrollo internos de la escuela, ademas aportando con practicas profesionales en el lugar de residencia creando el sitio oficial del municipio.',
+    link: ''
+  }
 ]
 ---
 
-<ol class="ml-3 relative border-s border-gray-200 dark:border-gray-700">                  
-    {
+<ol class="ml-3 relative border-s border-gray-200 dark:border-gray-700">
+  {
     EXPERIENCE.map((experience) => (
-    <ExperienceItem key={experience.id} {...experience} />
-        ))}
+      <ExperienceItem key={experience.id} {...experience} />
+    ))
+  }
 </ol>

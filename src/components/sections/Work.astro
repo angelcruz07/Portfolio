@@ -8,114 +8,115 @@ import Eye from '../../icons/Eye.astro'
 
 const TAGS = {
   NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextIcon,
+    name: 'Next.js',
+    class: 'bg-black text-white',
+    icon: NextIcon
   },
   TAILWIND: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
-    icon: TailwindIcon,
+    name: 'Tailwind CSS',
+    class: 'bg-[#003159] text-white',
+    icon: TailwindIcon
   },
-  ASTRO : {
-    name : 'Astro', 
+  ASTRO: {
+    name: 'Astro',
     class: 'bg-black text-white',
     icon: AstroIcon
-  }, 
-  MYSQL : {
-    name : 'Mysql', 
-    class: 'bg-white text-black', 
+  },
+  MYSQL: {
+    name: 'Mysql',
+    class: 'bg-white text-black',
     icon: Mysql
   }
 }
 
-
-const PROJECTS = [ 
-    {
-      title: 'Code Verse',
-          description: 'Remasterizacion del sitio web de la empresa de desarrollo de software Code Verse en México.',
-          link: 'https://codeverse.mx',
-          github: '',
-          image: '/img/works/codeverse1.webp',
-          tags: [TAGS.NEXT, TAGS.TAILWIND]
-    },
-    {
-        title: 'Code Verse',
-        description: 'Landing page para la empresa de desarrollo de software Code Verse en México.',
-        link: 'https://codeversee.vercel.app/',
-        github: '',
-        image: '/img/works/codeverse.webp',
-        tags: [TAGS.ASTRO, TAGS.TAILWIND]
-    },
-    { 
-        title: 'Turismo Sultepec ', 
-        description: 'Lider de desarrollo en un sitio web para fomentar el turismo en el municipio de Sultepec - Edomex.',
-        link: 'https://sultepecturistico.vercel.app/', 
-        github: '',
-        image: '/img/works/work1.webp',
-        tags: [TAGS.NEXT, TAGS.MYSQL]
-    },
-    { 
-        title: 'NVS Latinos cleaning ', 
-        description: 'Landing page para servicios de limpieza en hogares de Reino Unido 🇬🇧.',
-        link: 'https://lvaservicescleaning.vercel.app/', 
-        github: '#',
-        image: '/img/works/work2.webp',
-        tags: [TAGS.NEXT, TAGS.TAILWIND]
-    },
-    { 
-        title: 'Hamma Beads', 
-        description: 'Landing page  para para publicitar un negocio de piezas echas con la tecnica Hamma Beads.', 
-        link: 'https://www.hammabeads.shop/',
-        image: '/img/works/work3.webp', 
-        tags: [TAGS.ASTRO, TAGS.TAILWIND] 
-
-    }
+const PROJECTS = [
+  {
+    title: 'Code Verse',
+    description:
+      'Remasterizacion del sitio web de la empresa de desarrollo de software Code Verse en México.',
+    link: 'https://codeverse.mx',
+    github: '',
+    image: '/img/works/codeverse1.webp',
+    tags: [TAGS.NEXT, TAGS.TAILWIND]
+  },
+  {
+    title: 'Code Verse',
+    description:
+      'Landing page para la empresa de desarrollo de software Code Verse en México.',
+    link: 'https://codeversee.vercel.app/',
+    github: '',
+    image: '/img/works/codeverse.webp',
+    tags: [TAGS.ASTRO, TAGS.TAILWIND]
+  },
+  {
+    title: 'Turismo Sultepec ',
+    description:
+      'Lider de desarrollo en un sitio web para fomentar el turismo en el municipio de Sultepec - Edomex.',
+    link: 'https://sultepecturistico.vercel.app/',
+    github: '',
+    image: '/img/works/work1.webp',
+    tags: [TAGS.NEXT, TAGS.MYSQL]
+  },
+  {
+    title: 'NVS Latinos cleaning ',
+    description:
+      'Landing page para servicios de limpieza en hogares de Reino Unido 🇬🇧.',
+    link: 'https://lvaservicescleaning.vercel.app/',
+    github: '#',
+    image: '/img/works/work2.webp',
+    tags: [TAGS.NEXT, TAGS.TAILWIND]
+  },
+  {
+    title: 'Hamma Beads',
+    description:
+      'Landing page  para para publicitar un negocio de piezas echas con la tecnica Hamma Beads.',
+    link: 'https://www.hammabeads.shop/',
+    image: '/img/works/work3.webp',
+    tags: [TAGS.ASTRO, TAGS.TAILWIND]
+  }
 ]
 ---
 
-
-{ 
-PROJECTS.map(({ title, description, tags, image, link})=> (
- <article class="">
-   <div class='md:w-96'>
+{
+  PROJECTS.map(({ title, description, tags, image, link }) => (
+    <article class="">
+      <div class="md:w-96">
         <h3 class="text-2xl font-bold neon-white">{title}</h3>
-    <p class="text-base text-gray-400">{description}</p> 
+        <p class="text-base text-gray-400">{description}</p>
 
-    <ul class='flex text-base gap-x-2 items-center mb-5 mt-1'>
-        {tags.map((tag) => (
-            <li class="mt-2" >
+        <ul class="flex text-base gap-x-2 items-center mb-5 mt-1">
+          {tags.map((tag) => (
+            <li class="mt-2">
               <span
-                class={`flex items-center gap-x-2 rounded-full py-1 px-2 text-xs ${tag.class} font-semibold `}
-              >
-                <tag.icon class='size-3' />
+                class={`flex items-center gap-x-2 rounded-full py-1 px-2 text-xs ${tag.class} font-semibold `}>
+                <tag.icon class="size-3" />
                 {tag.name}
-              </span>    
-            </li>      
+              </span>
+            </li>
           ))}
           <li>
-         <a  class="rounded-full mt-2 flex justify-center items-center bg-white/10  cursor-pointer
-          text-xs py-1 px-2" 
-          href={link}
-          target="_blank">
-             <Eye/> Demo
-        </a>  
-        </li>
-    </ul> 
+            <a
+              class="rounded-full mt-2 flex justify-center items-center bg-white/10  cursor-pointer
+          text-xs py-1 px-2"
+              href={link}
+              target="_blank">
+              <Eye /> Demo
+            </a>
+          </li>
+        </ul>
 
-    <div class="overflow-hidden">
-      <a href={link} target="_blan">
-      <Image
-          src={image}
-          width={420}
-          height={240}
-          class="rounded shadow-2xl shadow-white/10 aspect-video cursor-pointer transition-transform ease-out duration-500 transform hover:scale-110"
-          alt={`Captura de pantalla del proyecto ${image}`}
-        />
-      </a>
+        <div class="overflow-hidden">
+          <a href={link} target="_blan">
+            <Image
+              src={image}
+              width={420}
+              height={240}
+              class="rounded shadow-2xl shadow-white/10 aspect-video cursor-pointer transition-transform ease-out duration-500 transform hover:scale-110"
+              alt={`Captura de pantalla del proyecto ${image}`}
+            />
+          </a>
+        </div>
       </div>
-    </div>
-</article>
-
-))
+    </article>
+  ))
 }
