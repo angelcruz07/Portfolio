@@ -5,6 +5,7 @@ import AstroIcon from '../../icons/Astro.astro'
 import TailwindIcon from '../../icons/Tailwind.astro'
 import Mysql from '../../icons/Mysql.astro'
 import Eye from '../../icons/Eye.astro'
+import Postgresql from '../../icons/Postgresql.astro'
 
 const TAGS = {
   NEXT: {
@@ -26,27 +27,32 @@ const TAGS = {
     name: 'Mysql',
     class: 'bg-white text-black',
     icon: Mysql
+  },
+  POSTGRESQL: {
+    name: 'Postgresql',
+    class: 'bg-white text-black',
+    icon: Postgresql
   }
 }
 
 const PROJECTS = [
   {
-    title: 'Code Verse',
+    title: 'Axolmen',
     description:
-      'Remasterizacion del sitio web de la empresa de desarrollo de software Code Verse en México.',
-    link: 'https://codeverse.mx',
+      'Eccomerce personalizado para la marca de ropa "Axolmen" integrando funcionalidades de administración avanzadas.',
+    link: 'https://axolmen.con',
     github: '',
-    image: '/img/works/codeverse1.webp',
-    tags: [TAGS.NEXT, TAGS.TAILWIND]
+    image: '/img/works/axolmen.png',
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.POSTGRESQL]
   },
   {
     title: 'Code Verse',
     description:
-      'Landing page para la empresa de desarrollo de software Code Verse en México.',
-    link: 'https://codeversee.vercel.app/',
+      'Desarrollo del sitio web informativo de la start up de desarrollo de software Code Verse en México utilizando React.',
+    link: 'https://codeverse.mx',
     github: '',
-    image: '/img/works/codeverse.webp',
-    tags: [TAGS.ASTRO, TAGS.TAILWIND]
+    image: '/img/works/codeverse1.webp',
+    tags: [TAGS.NEXT, TAGS.TAILWIND]
   },
   {
     title: 'Turismo Sultepec ',
@@ -65,14 +71,6 @@ const PROJECTS = [
     github: '#',
     image: '/img/works/work2.webp',
     tags: [TAGS.NEXT, TAGS.TAILWIND]
-  },
-  {
-    title: 'Hamma Beads',
-    description:
-      'Landing page  para para publicitar un negocio de piezas echas con la tecnica Hamma Beads.',
-    link: 'https://www.hammabeads.shop/',
-    image: '/img/works/work3.webp',
-    tags: [TAGS.ASTRO, TAGS.TAILWIND]
   }
 ]
 ---
